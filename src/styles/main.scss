@@ -2,7 +2,7 @@
 .wrapper {
   @apply flex flex-wrap items-center justify-center text-center  gap-5 mt-[40px] pb-[180px];
   @include  r-laptop{
-    @apply items-stretch w-full;
+    @apply items-stretch w-full pb-[120px];;
     flex-wrap: nowrap;
     width: 96%;
     margin-left: auto;
@@ -32,7 +32,7 @@ header {
 }
 //FOOTER
 footer {
-  @apply fixed bottom-0 left-0 right-0;
+  @apply relative bottom-0 left-0 right-0;
   @apply px-[25px] pb-[40px];
   .footer-id {
     @apply w-max ml-auto flex items-center gap-[9px];
