@@ -1,0 +1,37 @@
+// DROPDOWN
+.dropdown {
+  @apply relative inline-block w-[115px] h-[33px] rounded-[2px] bg-secondary mt-[16px] border border-secondary;
+  .dropdown-button {
+    @apply h-full  w-full text-default-text text-center text-[18px] font-medium uppercase flex items-center gap-[5px] px-2 py-[6px];
+    img {
+      @apply w-[21px] h-[21px] object-contain;
+    }
+  }
+  &.primary {
+    @apply border-solid border border-accent-green;
+    .dropdown-button {
+      @apply text-accent-green;
+    }
+  }
+}
+.dropdown-menu {
+  @apply block absolute bg-secondary min-w-[160px] z-[1] max-h-0 overflow-hidden transition-[max-height] duration-[0.2s] ease-out mt-1;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  // transition: max-height 0.2s ease-out;
+}
+.dropdown:hover .dropdown-menu {
+  max-height: 200px; /* or whatever max height you want */
+}
+.dropdown-item {
+  @apply h-full  w-full text-default-text text-center text-[16px] font-medium uppercase flex items-center gap-[8px] px-[10px] py-[12px];
+  img {
+    @apply w-[18px] h-[18px] object-contain;
+  }
+  &:last-child {
+    @apply pb-[20px];
+  }
+}
+.rotate {
+  transition: all 0.3s linear;
+  transform: rotate(180deg);
+}

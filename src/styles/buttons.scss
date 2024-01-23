@@ -1,0 +1,53 @@
+// BUTTONS
+.primary-btn {
+  @apply w-full h-[56px] grid place-content-center text-center bg-accent-green text-phthalo-green text-[18px] font-medium tracking-[1.35px] transition-all ease-in-out duration-200;
+   &:disabled {
+    @apply bg-transparent mt-[17px];
+    color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  &.btn-transition {
+    @apply top-[17px] relative z-[9] overflow-hidden;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background: transparent !important;
+  }
+  &.btn-transition:hover {
+    border: 1px solid transparent;
+    color: #41ff96 !important;
+  }
+  &.btn-transition::before {
+    content: "";
+    @apply w-full h-full block bg-accent-green absolute left-[0%] opacity-100 top-0 -z-[12];
+    -webkit-transition: all 0.65s cubic-bezier(0.77, 0, 0.175, 1);
+    -moz-transition: all 0.65s cubic-bezier(0.77, 0, 0.175, 1);
+    -o-transition: all 0.65s cubic-bezier(0.77, 0, 0.175, 1);
+    transition: all 0.65s cubic-bezier(0.77, 0, 0.175, 1);
+  }
+  &.btn-transition::after {
+    content: "";
+    @apply w-full h-full block bg-[#37d07c] absolute left-[0%] opacity-100 top-0 -z-[15];
+    -webkit-transition: all 0.65s cubic-bezier(0.77, 0, 0.175, 1);
+    -moz-transition: all 0.65s cubic-bezier(0.77, 0, 0.175, 1);
+    -o-transition: all 0.65s cubic-bezier(0.77, 0, 0.175, 1);
+    transition: all 0.65s cubic-bezier(0.77, 0, 0.175, 1);
+  }
+  &.btn-transition:hover::before,
+  &.btn-transition:hover::before {
+    opacity: 1;
+    -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  &.btn-transition:hover::after,
+  &.btn-transition:hover::after {
+    opacity: 1;
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}

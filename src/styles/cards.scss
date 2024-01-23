@@ -1,0 +1,161 @@
+// CARD STYLE
+.card {
+  @apply rounded-[2px] border  bg-glass-purple max-w-full  flex flex-col  w-[92%];
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  .card-head {
+    @apply flex flex-wrap items-center justify-center px-[21px] py-2 h-auto gap-3 mb-3;
+    .brand {
+      @apply flex items-center gap-2 text-default-text text-lg font-medium;
+    }
+    font-family: Jost;
+    img {
+      @apply w-[29px] h-[29px] object-contain;
+    }
+
+    .mev-safe {
+      @apply flex items-center gap-3 rounded-[50px] bg-dark-purple w-max py-2 px-[14px];
+      p {
+        @apply text-accent-purple text-center text-[14px] font-normal;
+        line-height: normal;
+        span {
+          @apply font-semibold;
+        }
+      }
+      img {
+        @apply w-[15px] h-[15px] object-contain;
+      }
+    }
+    @include r-medium {
+      @apply justify-between;
+    }
+    @include r-desktop {
+      @apply h-[73px] justify-between;
+    }
+  }
+  .card-inner {
+    @apply rounded-[2px] bg-secondary h-full flex-grow mx-[17px] mb-[19px] py-[23px] px-[16px];
+    .payment-info {
+      @apply flex flex-col gap-[13px] relative z-[2];
+      .hound-swap {
+        @apply absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 z-[10] w-[48px] h-[48px] rounded-full bg-secondary grid place-content-center;
+      }
+    }
+    .card-inner-block {
+      @apply flex items-center justify-between px-[19px] pt-[17px] pb-[37px];
+      border-radius: 2px;
+      background: rgba(217, 217, 217, 0.05);
+      .left-col {
+        @apply flex flex-col gap-[15px] justify-start;
+        h4 {
+          @apply text-left text-light-text text-[14px] font-medium;
+        }
+        h2 {
+          @apply text-left text-default-text text-[25px] font-normal;
+          &.disabled {
+            @apply text-light-text text-[36px] font-normal;
+            line-height: normal;
+          }
+          @include r-plus{
+            @apply text-[36px];
+          }
+        }
+      }
+    }
+  }
+  &.panel-card {
+    @apply w-[92%] max-w-full min-h-[278px] h-[278px] overflow-auto;
+    .panel-head {
+      @apply flex justify-between items-center px-[18px] py-[14px] h-[75px];
+      .panel-title {
+        @apply text-default-text text-[18px] font-medium leading-[116.323%];
+        font-family: Jost;
+      }
+      .est-value {
+        @apply text-default-text text-right text-[24px];
+        font-family: Jost;
+        line-height: normal;
+      }
+      .est-text {
+        @apply text-light-text text-[12px] font-medium;
+        line-height: normal;
+      }
+    }
+    @include r-plus {
+      @apply w-[60%];
+    }
+    @include r-laptop {
+      @apply h-auto w-[305px];
+    }
+  }
+  @include r-plus {
+    @apply w-[60%];
+  }
+  @include r-laptop {
+    @apply h-[477px] w-[511px];
+  }
+  @include r-desktop {
+    @apply min-h-[488px] h-[488px];
+  }
+}
+.seperator {
+  @apply w-full h-[1px];
+  background: rgba(255, 255, 255, 0.08);
+}
+
+// COINS
+.crypto-coin {
+  @apply flex justify-between items-center pt-[11px] pb-[13px] px-[15px];
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  .coin-name {
+    @apply flex gap-[7px] items-center text-default-text font-medium text-[16px] uppercase;
+    line-height: normal;
+  }
+  .coin-total {
+    @apply text-default-text text-right uppercase;
+    .crypto-worth {
+      @apply text-[16px] font-medium mb-[2px];
+      line-height: normal;
+    }
+    .usdt-worth {
+      @apply text-[14px] font-normal;
+      line-height: normal;
+    }
+  }
+}
+// TRADE CHART
+.trade-chart-header {
+  @apply flex items-center justify-between text-default-text text-[14px] font-medium py-[8px] px-[19px];
+  line-height: normal;
+  background: rgba(255, 255, 255, 0.08);
+}
+.trade-entry-block {
+  @apply flex justify-between items-center pt-[12px] pb-[15px] px-5 text-default-text;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+.entry {
+  @apply text-left;
+}
+.current {
+  @apply text-right;
+}
+.crypto-worth {
+  @apply text-[16px] font-medium mb-[2px];
+  line-height: normal;
+}
+.usdt-worth {
+  @apply text-[14px] font-normal;
+  line-height: normal;
+}
+.coin {
+  p {
+    @apply text-default-text text-center text-[16px] font-medium uppercase;
+    line-height: normal;
+    &.profit {
+      @apply text-accent-green text-center text-[14px] font-medium tracking-[0.07px] w-max px-[12px] rounded-[50px] mt-[2px] bg-glass-green;
+    }
+    &.no-profit {
+      @apply text-default-text text-center text-[14px] font-medium tracking-[0.07px] w-max px-[12px] rounded-[50px] mt-[2px];
+      background: rgba(255, 255, 255, 0.15);
+    }
+  }
+}

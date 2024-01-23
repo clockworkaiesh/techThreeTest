@@ -1,0 +1,25 @@
+// POPUP
+.popup {
+  @apply rounded-[2px] fixed left-0 right-0 top-0 bottom-0 z-[20] flex items-center justify-center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(12.5px);
+  .popup-body {
+    @apply w-[930px] max-w-[98%] rounded-[2px] bg-[#160f2e] flex items-center justify-center flex-col gap-[18px] pt-[53px] pb-[63px] px-[68px];
+    width: 930px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .popup-title {
+    @apply text-default-text text-center text-[18px] font-medium tracking-[1.35px];
+  }
+  input {
+    @apply w-full rounded-[5px] text-light-text text-[18px] font-normal tracking-[0.09px] uppercase py-5 px-[38px];
+    line-height: normal;
+    border: 1px solid rgba(16, 16, 16, 0.1);
+    background: rgba(0, 0, 0, 0.3);
+    &::placeholder {
+      @apply text-accent-purple text-[18px] font-normal tracking-[0.09px] uppercase;
+      line-height: normal;
+    }
+  }
+}
