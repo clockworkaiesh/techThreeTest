@@ -5,9 +5,13 @@
   background: rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(12.5px);
   .popup-body {
-    @apply w-[930px] max-w-[98%] rounded-[2px] bg-[#160f2e] flex items-center justify-center flex-col gap-[18px] pt-[53px] pb-[63px] px-[68px];
+    @apply w-[930px] max-w-[98%] rounded-[2px] bg-[#160f2e] flex items-center justify-center flex-col gap-[18px] pt-[53px] pb-[63px] px-[28px];
     width: 930px;
     border: 1px solid rgba(255, 255, 255, 0.1);
+ 
+    @include r-plus{
+      @apply px-[68px];
+    }
   }
   .popup-title {
     @apply text-default-text text-center text-[18px] font-medium tracking-[1.35px];
