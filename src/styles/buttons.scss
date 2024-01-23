@@ -7,7 +7,7 @@
     border: 1px solid rgba(255, 255, 255, 0.2);
   }
   &.btn-transition {
-    @apply top-[17px] relative z-[9] overflow-hidden;
+    @apply top-[17px] relative z-[1] overflow-hidden;
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
@@ -49,5 +49,13 @@
     -moz-transform: translateX(-100%);
     -ms-transform: translateX(-100%);
     transform: translateX(-100%);
+  }
+}
+.secondary-btn {
+  @apply w-max min-w-[183px] grid place-content-center text-center mt-[17px] transition-all ease-in-out duration-200 rounded-[2px] p-3 leading-[1.05] text-default-text text-[16px] font-medium tracking-[1.2px];
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.1);
+  &:hover{
+    @apply bg-transparent;
   }
 }
