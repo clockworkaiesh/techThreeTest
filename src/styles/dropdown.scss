@@ -2,9 +2,15 @@
 .dropdown {
   @apply relative inline-block w-[115px] h-[33px] rounded-[2px] bg-secondary mt-[16px] border border-secondary;
   .dropdown-button {
-    @apply h-full  w-full text-default-text text-center text-[18px] font-medium uppercase flex items-center gap-[5px] px-2 py-[6px];
+    @apply h-full  w-full text-default-text text-center text-[15px] font-medium uppercase flex justify-between items-center gap-[5px] px-2 py-[6px];
     img {
       @apply w-[21px] h-[21px] object-contain;
+    }
+    .drop-label{
+      @apply flex items-center gap-[5px];
+    }
+    @include r-plus{
+      @apply text-[18px];
     }
   }
   &.primary {

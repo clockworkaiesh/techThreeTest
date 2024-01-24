@@ -1,6 +1,6 @@
 // BUTTONS
 .primary-btn {
-  @apply w-full h-[56px] grid place-content-center text-center bg-accent-green text-phthalo-green text-[18px] font-medium tracking-[1.35px] transition-all ease-in-out duration-200;
+  @apply w-full h-[46px] grid place-content-center text-center bg-accent-green text-phthalo-green text-[15px] font-medium tracking-[1.35px] transition-all ease-in-out duration-200;
    &:disabled {
     @apply bg-transparent mt-[17px];
     color: rgba(255, 255, 255, 0.2);
@@ -49,6 +49,9 @@
     -moz-transform: translateX(-100%);
     -ms-transform: translateX(-100%);
     transform: translateX(-100%);
+  }
+  @include r-plus{
+    @apply h-[56px] text-[18px];
   }
 }
 .secondary-btn {

@@ -33,11 +33,14 @@
     }
   }
   .card-inner {
-    @apply rounded-[2px] bg-secondary h-full flex-grow mx-[17px] mb-[19px] py-[23px] px-[16px];
+    @apply rounded-[2px] bg-secondary h-full flex-grow mx-[17px] mb-[19px] pt-[23px] pb-[43px] px-[16px];
     .payment-info {
       @apply flex flex-col gap-[13px] relative z-[2];
       .hound-swap {
-        @apply absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 z-[10] w-[48px] h-[48px] rounded-full bg-secondary grid place-content-center;
+        @apply absolute left-1/2 -translate-x-1/2 top-[47%] -translate-y-[47%] z-[10] w-[48px] h-[48px] rounded-full bg-secondary grid place-content-center;
+        @include r-plus{
+          @apply top-[47%] -translate-y-[47%];
+        }
       }
     }
     .card-inner-block {
@@ -60,6 +63,9 @@
           }
         }
       }
+    }
+    @include r-desktop{
+      @apply pb-[23px];
     }
   }
   &.panel-card {

@@ -26,8 +26,11 @@ function DropDown() {
   return (
     <div className="dropdown">
       <button onClick={handleToggle} className="dropdown-button">
-        <img src={selectedOption.icon} alt="" />
-        {selectedOption.name}
+        <div className="drop-label">
+          <img src={selectedOption.icon} alt="" />
+          {selectedOption.name}
+        </div>
+
         <img
           src={toggle}
           alt=""
